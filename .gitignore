@@ -1,0 +1,12 @@
+# PyCharm
+.idea
+
+# Python
+*.pyc
+*.pyo
+*.pyd
+
+# Package
+/*egg-info
+/build
+/dist
