@@ -37,7 +37,7 @@ class Database(object):
         run(['database', command] + options + [self.path] + post)
 
     @staticmethod
-    def create_from_cpp(code, command=None):
+    def from_cpp(code, command=None):
         # Get default compiler
         compilers = ['cxx', 'clang++', 'g++', 'cc', 'clang', 'gcc']
         if command is None:

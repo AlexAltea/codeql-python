@@ -12,10 +12,7 @@ CODEQL_DOWNLOAD_URL = 'https://github.com/AlexAltea/codeql-python/tarball/' + CO
 CODEQL_DESCRIPTION = """CodeQL for Python
 =================
 
-.. image:: https://img.shields.io/pypi/v/codeql-python.svg
-    :target: https://pypi.python.org/pypi/codeql-python
-
-Python 3.x bindings for the CodeQL CLI application.
+Unofficial Python 3.x bindings for the CodeQL CLI application.
 
 More information at: https://github.com/AlexAltea/codeql-python
 """
@@ -23,7 +20,7 @@ More information at: https://github.com/AlexAltea/codeql-python
 setuptools.setup(
     name='codeql-python',
     version=CODEQL_VERSION,
-    description='Python bindings for CodeQL CLI',
+    description='Unofficial Python bindings for CodeQL CLI',
     long_description=CODEQL_DESCRIPTION,
     license='MIT',
     author='Alexandro Sanchez Bach',

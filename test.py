@@ -4,7 +4,7 @@
 import codeql
 
 def test_basic():
-    db = codeql.Database.create_from_cpp('int main() { return 0; }')
+    db = codeql.Database.from_cpp('int main() { return 0; }')
     res = db.query('''
         select "Test"
     ''')
