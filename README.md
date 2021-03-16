@@ -18,6 +18,7 @@ pip install git+https://github.com/AlexAltea/codeql-python.git
 ```python
 import codeql
 
+# Open databases from files or folders
 db = codeql.Database('path/to/db.zip')
 
 # Queries return a CSV-like array of arrays
@@ -31,4 +32,19 @@ results = db.query('''
     from BlockStmt block    
     select block
 ''')
+
+# Create temporary databases from inlined sources
+db = codeql.Database.from_cpp('''
+    int main() {
+        return 1337 + 1337 + 1337;
+    }
+''')
+results = db.query('''
+    import cpp
+    from Literal literal where
+        literal.getType() instanceof IntType and
+        literal.getValue().toInt() = 1337
+    select literal
+''')
+assert(len(results[1:]) == 3)
 ```
