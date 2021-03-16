@@ -5,7 +5,6 @@ CodeQL for Python.
 """
 
 # Imports
-from .codeql import *
-
-# Prevent polluting namespace
-del codeql
+from .bqrs import *
+from .database import *
+from .query import *
